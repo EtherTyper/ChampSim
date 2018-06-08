@@ -9,5 +9,6 @@ To generate traces for testing various simulator configurations, you must first 
   - Run commands of the form:
 
 ```sh
-../../../pin -t obj-intel64/champsim_tracer.dylib -o ls_trace.champsim -s 1000 -t 2000 -- ${TO BE TRACED}
+../../../pin -t obj-intel64/champsim_tracer.dylib -o trace.champsim -s 1000 -t 2000 -- ${TO BE TRACED}
+gzip trace.champsim
 ```
