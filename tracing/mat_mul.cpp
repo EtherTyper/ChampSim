@@ -5,7 +5,8 @@
 #include <iostream>
 #include <vector>
 
-using matrix = std::vector<std::vector<int> >;
+// The comment is to prevent my linter from putting the two right brackets together, which Clang doesn't like.
+using matrix = std::vector <std::vector<int> /**/>;
 
 matrix multiply(matrix A, matrix B) {
     int A_rows = A.size();
@@ -31,8 +32,30 @@ matrix multiply(matrix A, matrix B) {
 }
 
 int main(int argc, char **argv) {
-    matrix A = matrix(3, std::vector<int>(4));
-    matrix B = matrix(4, std::vector<int>(3));
+    matrix A = {
+            {1,  2,  3},
+            {4,  5,  6},
+            {7,  8,  9},
+            {10, 11, 12}
+    };
+
+    matrix B = {
+            {1, 2,  3,  4},
+            {5, 6,  7,  8},
+            {9, 10, 11, 12}
+    };
 
     matrix result = multiply(A, B);
+
+    // Print the results.
+    for (int i = 0; i < result.size(); i++) {
+        for (int j = 0; j < result[i].size(); j++) {
+            std::cout << result[i][j];
+
+            if (j != result[i].size() - 1)
+                std::cout << ' ';
+        }
+
+        std::cout << '\n';
+    }
 }
