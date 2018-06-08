@@ -58,7 +58,7 @@ DRAM Statistics
  AVG_CONGESTED_CYCLE: 10
 ```
 
-===
+---
 
 # SRRIP Results
 
@@ -121,7 +121,7 @@ DRAM Statistics
  AVG_CONGESTED_CYCLE: 10
 ```
 
-===
+---
 
 # DRRIP Results
 
@@ -312,7 +312,7 @@ DRAM Statistics
  AVG_CONGESTED_CYCLE: 10
 ```
 
-===
+---
 
 # SHIP Results
 
